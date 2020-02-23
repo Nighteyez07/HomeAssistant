@@ -10,7 +10,7 @@ stages:
 - stage: test
   displayName: Test HA
   jobs: 
-  - job: 'Test Config'
+  - job: 'Test_Config'
     container:
       image: homeassistant/amd64-homeassistant
     steps:
