@@ -10,8 +10,10 @@ stages:
 - stage: test
   displayName: Test HA
   jobs: 
-  - job: 'Test_Config'
+  - job: ConfigTest
+    displayName: Test HA Config
     container:
       image: homeassistant/amd64-homeassistant
     steps:
-      - script: -hass --script check_config -c .
+      - script: |
+        -hass --script check_config -c .
