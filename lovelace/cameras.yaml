@@ -1,0 +1,10 @@
+title: Cameras
+cards:
+  - type: picture-entity
+    camera_image: camera.doorbell
+    camera_view: live
+    entity: camera.doorbell
+  - type: picture-entity
+    camera_image: camera.ouside
+    camera_view: live
+    entity: camera.outside  

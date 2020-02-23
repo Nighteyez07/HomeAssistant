@@ -1,0 +1,51 @@
+####################################################
+#                                                  #
+#                  NETWORK STATUS                  #
+#                                                  #
+####################################################
+
+title: Network Status
+icon: mdi:lan
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Network Status
+    cards:
+      - type: horizontal-stack
+        title: Network Status
+        cards:
+          - type: sensor
+            entity: sensor.speedtest_download
+            name: Download
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            entity: sensor.speedtest_upload
+            name: Upload
+            hours_to_show: 24
+            graph: line
+            detail: 1
+  # - type: custom:vertical-stack-in-card
+  #   title: Server Status
+  #   cards:
+  #     - type: horizontal-stack
+  #       title: Server Status
+  #       cards:
+  #         - type: sensor
+  #           entity: sensor.emby_cpu_used
+  #           name: CPU Used
+  #           hours_to_show: 24
+  #           graph: line
+  #           detail: 1
+  #         - type: sensor
+  #           entity: sensor.emby_disk_used_percent
+  #           name: Disk Space Used
+  #           hours_to_show: 24
+  #           graph: line
+  #           detail: 1
+  #         - type: sensor
+  #           entity: sensor.emby_ram_used_percent
+  #           name: RAM %
+  #           hours_to_show: 24
+  #           graph: line
+  #           detail: 1  

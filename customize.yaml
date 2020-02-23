@@ -1,0 +1,6 @@
+# device_tracker.duncan_xr:
+#   friendly_name: Duncan
+binary_sensor.kaipule_technology_co_ltd_im20_door_window_sensor_sensor:
+  device_class: door
+binary_sensor.kaipule_technology_co_ltd_im20_door_window_sensor_sensor_2:
+  device_class: door

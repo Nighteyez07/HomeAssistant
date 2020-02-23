@@ -1,0 +1,26 @@
+- id: '1574740164008'
+  alias: Door lock
+  description: ''
+  trigger:
+  - entity_id: lock.schlage_allegion_be469_touchscreen_deadbolt_locked
+    platform: state
+  condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.state in (''locked'',''unlocked'') or trigger.to_state.state
+      in (''locked'',''unlocked'') }}'
+  action:
+  - data:
+      message: Front Door {{ states('lock.schlage_allegion_be469_touchscreen_deadbolt_locked')}}
+    service: notify.pushover
+- id: '1575784425351'
+  alias: New Automation
+  description: ''
+  trigger:
+  - at: '22:00'
+    platform: time
+  condition: []
+  action:
+  - device_id: aff1cd590eac4ac5bb7ad6c66980e8fc
+    domain: switch
+    entity_id: switch.securifi_ltd_unk_model_196ff704_1_6
+    type: turn_off
