@@ -16,5 +16,5 @@ stages:
       vmImage: 'ubuntu-16.04'
     container:
       image: homeassistant/amd64-homeassistant
-    steps:
-      - script: hass --script check_config -c
+    # steps:
+    #   - script: hass --script check_config -c
