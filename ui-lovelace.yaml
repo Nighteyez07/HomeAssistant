@@ -4,20 +4,21 @@
 #                                                  #
 ####################################################
 resources:
-  - url: /community_plugin/atomic_calendar/atomic_calendar.js
+  - url: /hacsfiles/atomic_calendar/atomic_calendar.js
     type: module
-  - url: /community_plugin/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
-    type: js  
-  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js?v=0.1.3
+  #https://github.com/benct/lovelace-xiaomi-vacuum-card  
+  - url: /hacsfiles/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js?v=3.0.1
+    type: module  
+  - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js?v=0.3.2
     type: js  
   #https://github.com/kalkih/mini-graph-card  
-  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module  
   #https://github.com/maykar/custom-header  
-  - url: /community_plugin/custom-header/custom-header.js
+  - url: /hacsfiles/custom-header/custom-header.js
     type: module 
   #https://github.com/custom-cards/button-card
-  - url: /community_plugin/custom-header/button-card.js
+  - url: /hacsfiles/custom-header/button-card.js
     type: module
   #https://github.com/r-renato/ha-card-waze-travel-time
   #- url: /community_plugin/ha-card-waze-travel-time/ha-card-waze-travel-time.js

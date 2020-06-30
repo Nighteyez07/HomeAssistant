@@ -89,12 +89,44 @@ ecovacs:
 #https://www.home-assistant.io/lovelace/yaml-mode/
 lovelace:
   mode: yaml 
-
+  resources:
+  - url: /hacsfiles/atomic_calendar/atomic_calendar.js
+    type: module
+  #https://github.com/benct/lovelace-xiaomi-vacuum-card  
+  - url: /hacsfiles/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js?v=3.0.1
+    type: module  
+  - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js?v=0.3.2
+    type: js  
+  #https://github.com/kalkih/mini-graph-card  
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+    type: module  
+  #https://github.com/maykar/custom-header  
+  - url: /hacsfiles/custom-header/custom-header.js
+    type: module 
+  #https://github.com/custom-cards/button-card
+  - url: /hacsfiles/custom-header/button-card.js
+    type: module
+  dashboards:
+    lovelace-main:
+      mode: yaml
+      filename: lovelace/main-view.yaml
+      title: Main
+      icon: mdi:tools
+      show_in_sidebar: true
+    lovelace-kiosk:
+      mode: yaml
+      filename: lovelace/kiosk-view.yaml
+      title: Kiosk
+      icon: mdi:tools
+      show_in_sidebar: false
 notify:
   - name: pushover
     platform: pushover
     api_key: !secret pushover_api_key
     user_key: !secret pushover_user_key   
+
+hacs:    
+  token: !secret hacs_token
 
 alert:
   freezer_open_alert:
@@ -145,6 +177,7 @@ speedtestdotnet:
   monitored_conditions:
     - download
     - upload
+    - ping
 
 #https://www.home-assistant.io/components/system_health/
 system_health:
