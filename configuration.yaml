@@ -109,16 +109,16 @@ lovelace:
   dashboards:
     lovelace-main:
       mode: yaml
-      filename: lovelace/main-view.yaml
+      filename: main-view.yaml
       title: Main
       icon: mdi:tools
       show_in_sidebar: true
     lovelace-kiosk:
       mode: yaml
-      filename: lovelace/kiosk-view.yaml
+      filename: kiosk-view.yaml
       title: Kiosk
       icon: mdi:tools
-      show_in_sidebar: false
+      show_in_sidebar: true
 notify:
   - name: pushover
     platform: pushover
@@ -181,6 +181,20 @@ speedtestdotnet:
 
 #https://www.home-assistant.io/components/system_health/
 system_health:
+
+camera:
+  - platform: mjpeg
+    mjpeg_url: http://192.168.1.24:81/mjpg/Outside
+    name: Outside
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic  
+  - platform: mjpeg
+    mjpeg_url: http://192.168.1.24:81/mjpg/Doorbell
+    name: Doorbell
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic    
 
 #https://www.home-assistant.io/integrations/tuya/
 # tuya:

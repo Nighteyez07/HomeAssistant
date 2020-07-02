@@ -31,8 +31,8 @@ cards:
         entities:
           - entity: binary_sensor.kaipule_technology_co_ltd_im20_door_window_sensor_sensor
             name: Garage Fridge
-          - entity: binary_sensor.kaipule_technology_co_ltd_im20_door_window_sensor_sensor_2
-            name: Garage Freezer
+          # - entity: binary_sensor.kaipule_technology_co_ltd_im20_door_window_sensor_sensor_2
+          #   name: Garage Freezer
           - entity: lock.schlage_allegion_be469_touchscreen_deadbolt_locked
             name: Door Lock
             tap_action:
@@ -49,8 +49,8 @@ cards:
             name: Garage Heater
             tap_action:
               action: toggle      
-          - entity: binary_sensor.wyzesense_778a7b4a
-            name: Front Door
-          - entity: binary_sensor.wyzesense_778a7b1e
-            name: Freezer
+          # - entity: binary_sensor.wyzesense_778a7b4a
+          #   name: Front Door
+          # - entity: binary_sensor.wyzesense_778a7b1e
+          #   name: Freezer
           - entity: cover.garage_door

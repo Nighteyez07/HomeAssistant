@@ -1,0 +1,9 @@
+title: Kiosk
+views:
+  - !include lovelace/home.yaml
+  #- !include lovelace/cameras.yaml
+    # View tab title.
+
+
+
+

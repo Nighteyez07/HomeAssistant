@@ -1,0 +1,10 @@
+title: Home
+views:
+  - !include lovelace/home.yaml
+  - !include lovelace/network.yaml
+  - !include lovelace/cameras.yaml
+    # View tab title.
+
+
+
+
